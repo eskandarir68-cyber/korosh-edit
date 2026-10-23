@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0a0b">
+<title>نمونه‌کارهای من | ادیت ویدیو</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#09090b;--panel:#121214;--panel2:#19191c;--gold:#e7bd63;--gold2:#f7df9b;--text:#f6f3ed;--muted:#aaa6a0;--line:#2b2925}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#302516 0,transparent 34%),var(--bg);color:var(--text);font-family:Vazirmatn, sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#09090be8;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff10}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 0}.brand{display:flex;align-items:center;gap:12px;font-weight:900}.brand-mark{display:grid;place-items:center;width:42px;height:42px;border:1px solid var(--gold);color:var(--gold);border-radius:13px;font-size:20px;box-shadow:inset 0 0 18px #e7bd6318}.brand small{display:block;color:var(--muted);font-size:11px;font-weight:500}.links{display:flex;gap:24px;color:#d2cec6;font-size:14px}.links a:hover{color:var(--gold)}.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--gold);border-radius:12px;padding:11px 17px;font:inherit;font-weight:800;cursor:pointer;transition:.2s}.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17120a}.btn-ghost{color:var(--gold);background:transparent}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.hero{padding:90px 0 72px;display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center;min-height:520px}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-weight:800;font-size:13px;letter-spacing:.2px}.dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px var(--gold)}h1{font-size:clamp(38px,5.4vw,68px);line-height:1.3;margin:18px 0 18px;font-weight:900;letter-spacing:-1.8px}h1 span{color:var(--gold)}.hero p{color:#bcb7ae;line-height:2.1;max-width:600px;font-size:16px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.visual{min-height:350px;border:1px solid #5d4825;border-radius:28px;position:relative;overflow:hidden;background:linear-gradient(145deg,#292116,#111113 58%,#211a0e);display:flex;align-items:center;justify-content:center}.visual:before,.visual:after{content:"";position:absolute;border:1px solid #e7bd6338;border-radius:50%;width:300px;height:300px}.visual:after{width:420px;height:420px}.play-emblem{position:relative;z-index:1;width:130px;height:130px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--gold);background:#0b0b0dcc;box-shadow:0 0 80px #e7bd6322;color:var(--gold);font-size:44px}.visual-label{position:absolute;bottom:24px;right:24px;left:24px;z-index:2;display:flex;justify-content:space-between;align-items:end}.visual-label strong{font-size:18px}.visual-label span{color:var(--gold);font-size:12px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}.stat{border-right:2px solid var(--gold);padding-right:14px}.stat strong{font-size:22px;color:var(--gold)}.stat span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.section{padding:62px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:26px}.section-head h2{font-size:clamp(26px,3vw,36px);margin:8px 0 0}.section-head p{color:var(--muted);margin:0;font-size:14px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 26px}.tab{background:#141416;border:1px solid #33302a;color:#d5d0c7;border-radius:999px;padding:9px 16px;font:inherit;cursor:pointer}.tab.active,.tab:hover{background:#e7bd6319;border-color:var(--gold);color:var(--gold)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.work-card{background:linear-gradient(180deg,#171719,#101012);border:1px solid #ffffff12;border-radius:19px;overflow:hidden;transition:.25s}.work-card:hover{transform:translateY(-5px);border-color:#a88443}.thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#292318,#101012);position:relative;overflow:hidden;display:grid;place-items:center}.thumb img,.thumb video{width:100%;height:100%;object-fit:cover}.thumb .play{position:absolute;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:#080808c9;border:1px solid var(--gold);color:var(--gold);font-size:20px;pointer-events:none}.category{position:absolute;top:12px;right:12px;border:1px solid #e7bd6380;background:#09090bdc;color:var(--gold);padding:5px 10px;border-radius:999px;font-size:11px}.work-info{padding:17px}.work-info h3{margin:0 0 7px;font-size:17px}.work-info p{margin:0;color:var(--muted);font-size:13px;line-height:1.9}.work-actions{display:flex;gap:9px;margin-top:15px}.work-actions .btn{padding:8px 12px;font-size:12px}.empty{grid-column:1/-1;text-align:center;border:1px dashed #4a402d;border-radius:18px;padding:50px 20px;color:var(--muted)}.empty strong{display:block;color:var(--gold);font-size:18px;margin-bottom:8px}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:center;background:linear-gradient(130deg,#181511,#111113);border:1px solid #4b3a20;border-radius:24px;padding:34px}.about-mark{height:210px;border-radius:18px;border:1px solid #6e552b;display:grid;place-items:center;color:var(--gold);font-size:62px;background:radial-gradient(circle,#3a2b15,#101012 70%)}.about h2{font-size:29px;margin:10px 0}.about p{color:#bcb7ae;line-height:2}.contact-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+footer{border-top:1px solid #ffffff12;padding:25px 0;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.notice{color:#c8bda8;font-size:12px;margin-top:12px}
+.modal{position:fixed;inset:0;background:#000e;z-index:50;display:none;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.modal-box{width:min(950px,100%);background:#101012;border:1px solid #6a5129;border-radius:18px;overflow:hidden}.modal-top{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid #ffffff15}.modal-top button{background:none;color:var(--gold);border:0;font-size:26px;cursor:pointer}.modal-media{max-height:78vh;display:grid;place-items:center;background:#050505}.modal-media video,.modal-media iframe{width:100%;height:min(70vh,650px);border:0}.modal-media iframe{aspect-ratio:16/9}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:55px 0 40px;gap:28px}.visual{min-height:280px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.links{display:none}.about{grid-template-columns:1fr}.about-mark{height:140px}.section{padding:45px 0}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.stats{gap:8px}.stat strong{font-size:18px}.nav{padding:12px 0}.brand-mark{width:38px;height:38px}.hero{padding-top:42px}h1{font-size:39px}.visual{min-height:240px}.about{padding:22px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#"><span class="brand-mark">✦</span><span>VIDEO EDITOR<small>PORTFOLIO • SHOWREEL</small></span></a>
+<nav class="links"><a href="#home">خانه</a><a href="#works">نمونه‌کارها</a><a href="#youtube">یوتیوب</a><a href="#instagram">اینستاگرام</a><a href="#contact">تماس با من</a></nav>
+<a class="btn btn-ghost" href="#works">دیدن نمونه‌کارها ↙</a>
+</div></header>
+<main>
+<section class="wrap hero" id="home">
+<div>
+<div class="eyebrow"><span class="dot"></span> تدوین ویدیو • روایت تصویری • خلاقیت</div>
+<h1>هر ویدیو، یک داستان.<br><span>هر ادیت، یک امضا.</span></h1>
+<p>به دنیای نمونه‌کارهای من خوش اومدی. اینجا مجموعه‌ای از ادیت‌های یوتیوب و اینستاگرام رو می‌بینی؛ کارهایی که با دقت روی ریتم، رنگ، صدا و جزئیات ساخته شدن.</p>
+<div class="hero-actions"><a class="btn btn-gold" href="#works">مشاهده پروژه‌ها <span> ↙</span></a><a class="btn btn-ghost" href="#contact">همکاری با من</a></div>
+<div class="stats"><div class="stat"><strong>YOUTUBE</strong><span>ادیت ویدیوهای بلند و کوتاه</span></div><div class="stat"><strong>INSTAGRAM</strong><span>ریلز و ویدیوهای عمودی</span></div><div class="stat"><strong>CREATIVE</strong><span>تدوین با هویت بصری</span></div></div>
+</div>
+<div class="visual"><div class="play-emblem">▶</div><div class="visual-label"><div><strong>SHOWREEL</strong><br><span>SELECTED VIDEO WORKS</span></div><span>01 / PORTFOLIO</span></div></div>
+</section>
+<section class="section" id="works"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">SELECTED WORKS</div><h2>نمونه‌کارهای من</h2></div><p>پروژه‌ای رو انتخاب کن و تماشا کن.</p></div>
+<div class="tabs"><button class="tab active" data-filter="all">همه نمونه‌کارها</button><button class="tab" data-filter="youtube" id="youtube">یوتیوب</button><button class="tab" data-filter="instagram" id="instagram">اینستاگرام</button></div>
+<div class="grid" id="worksGrid"><div class="empty"><strong>هنوز نمونه‌کاری اضافه نشده</strong>بعد از ورود به پنل مدیریت، ویدیوهایت را اضافه کن تا اینجا برای کارفرما نمایش داده شوند.</div></div>
+</div></section>
+<section class="section"><div class="wrap about" id="contact"><div class="about-mark">✦</div><div><div class="eyebrow">LET'S WORK TOGETHER</div><h2>برای پروژه بعدی آماده‌ای؟</h2><p>اگر برای کانال یوتیوب یا پیج اینستاگرامت به ادیت حرفه‌ای نیاز داری، خوشحال می‌شم درباره پروژه‌ات صحبت کنیم. راه ارتباطی‌ات رو از این بخش اضافه کن.</p><div class="contact-row"><a class="btn btn-gold" id="contactBtn" href="mailto:hello@example.com">درخواست همکاری</a><a class="btn btn-ghost" id="instagramBtn" href="#" target="_blank" rel="noopener">اینستاگرام من</a></div><div class="notice">برای تغییر راه‌های ارتباطی، مقادیر فایل index.html را ویرایش کن.</div></div></div></section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> • ویدیو ادیتور پورتفولیو</span><span>طراحی با <span style="color:var(--gold)">طلایی و مشکی</span></span></div></footer>
+<div class="modal" id="videoModal" role="dialog" aria-modal="true"><div class="modal-box"><div class="modal-top"><strong id="modalTitle">پخش نمونه‌کار</strong><button id="closeModal" aria-label="بستن">×</button></div><div class="modal-media" id="modalMedia"></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* تنظیمات Supabase را بعد از ساخت پروژه در این دو مقدار قرار بده */
+const SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
+const SUPABASE_ANON_KEY = "YOUR_SUPABASE_PUBLISHABLE_OR_ANON_KEY";
+const USE_DEMO_DATA = false;
+let supabaseClient = null;
+if (window.supabase && SUPABASE_URL.startsWith("https://") && SUPABASE_ANON_KEY.startsWith("eyJ")) {
+  supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+}
+const demoWorks = [];
+const grid = document.getElementById('worksGrid');
+let allWorks = [];
+function safeText(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function embedUrl(url=''){
+  try { const u=new URL(url); if(u.hostname.includes('youtu.be')) return 'https://www.youtube-nocookie.com/embed/'+u.pathname.slice(1);
+    if(u.hostname.includes('youtube.com')) { const id=u.searchParams.get('v')||u.pathname.split('/').filter(Boolean).pop(); return id?'https://www.youtube-nocookie.com/embed/'+id:''; }
+    if(u.hostname.includes('vimeo.com')) { const id=u.pathname.split('/').filter(Boolean).pop(); return id?'https://player.vimeo.com/video/'+id:''; }
+  } catch(e){} return '';
+}
+function renderWorks(filter='all'){
+ const list=allWorks.filter(w=>filter==='all'||w.category===filter);
+ if(!list.length){grid.innerHTML='<div class="empty"><strong>هنوز نمونه‌کاری در این بخش نیست</strong>به‌زودی نمونه‌کارهای جدید اینجا قرار می‌گیرند.</div>';return;}
+ grid.innerHTML=list.map(w=>`<article class="work-card"><div class="thumb">${w.cover_url?`<img src="${safeText(w.cover_url)}" alt="${safeText(w.title)}" loading="lazy">`:'<span style="font-size:44px;color:#e7bd63">✦</span>'}<span class="category">${w.category==='youtube'?'یوتیوب':'اینستاگرام'}</span><span class="play">▶</span></div><div class="work-info"><h3>${safeText(w.title)}</h3><p>${safeText(w.description||'')}</p><div class="work-actions"><button class="btn btn-gold" data-play="${safeText(w.id)}">▶ تماشای ویدیو</button>${w.external_url?`<a class="btn btn-ghost" href="${safeText(w.external_url)}" target="_blank" rel="noopener">لینک اصلی ↗</a>`:''}</div></div></article>`).join('');
+ grid.querySelectorAll('[data-play]').forEach(b=>b.addEventListener('click',()=>playWork(b.dataset.play)));
+}
+function playWork(id){const w=allWorks.find(x=>String(x.id)===String(id));if(!w)return;const box=document.getElementById('modalMedia');document.getElementById('modalTitle').textContent=w.title;box.innerHTML='';
+ const e=embedUrl(w.video_url||'');
+ if(e){const iframe=document.createElement('iframe');iframe.src=e;iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';iframe.allowFullscreen=true;box.appendChild(iframe);}
+ else {const video=document.createElement('video');video.controls=true;video.autoplay=true;video.playsInline=true;video.src=w.video_url;box.appendChild(video);}
+ document.getElementById('videoModal').classList.add('open');
+}
+function closeModal(){document.getElementById('videoModal').classList.remove('open');document.getElementById('modalMedia').innerHTML='';}
+document.getElementById('closeModal').addEventListener('click',closeModal);
+document.getElementById('videoModal').addEventListener('click',e=>{if(e.target.id==='videoModal')closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderWorks(b.dataset.filter)}));
+async function loadWorks(){
+ if(USE_DEMO_DATA){allWorks=demoWorks;renderWorks();return;}
+ if(!supabaseClient){grid.innerHTML='<div class="empty"><strong>سایت آماده اتصال به پنل مدیریت است</strong>برای نمایش نمونه‌کارها، تنظیمات Supabase را طبق فایل راهنما وارد کن.</div>';return;}
+ const {data,error}=await supabaseClient.from('portfolio').select('*').eq('published',true).order('created_at',{ascending:false});
+ if(error){console.error(error);grid.innerHTML='<div class="empty"><strong>بارگذاری نمونه‌کارها انجام نشد</strong>تنظیمات Supabase و جدول portfolio را بررسی کن.</div>';return;}
+ allWorks=data||[];renderWorks();
+}
+document.getElementById('year').textContent=new Date().getFullYear();
+loadWorks();
+</script>
+</body></html>
