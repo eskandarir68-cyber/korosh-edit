@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09090b">
+<title>Korosh.Edit | مدیریت سایت</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#09090b;--panel:#141416;--gold:#e7bd63;--text:#f6f3ed;--muted:#aaa6a0;--line:#34302a}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 90% 0,#302516,transparent 35%),var(--bg);font-family:Vazirmatn,sans-serif;color:var(--text)}.wrap{width:min(1000px,92%);margin:34px auto}.top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:24px}.brand{font-weight:900;font-size:22px}.brand span{color:var(--gold)}a{color:var(--gold);text-decoration:none}.panel{background:#141416;border:1px solid #ffffff14;border-radius:18px;padding:24px;margin-bottom:20px}.panel h2{margin-top:0}.muted{color:var(--muted);font-size:13px;line-height:1.9}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:15px}.field label{font-size:13px;color:#d7d1c5}.field input,.field textarea,.field select{width:100%;background:#0b0b0d;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit;outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--gold)}.field textarea{min-height:85px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.btn{border:1px solid var(--gold);border-radius:10px;padding:11px 16px;font:inherit;font-weight:800;cursor:pointer}.primary{background:var(--gold);color:#17120a}.ghost{background:transparent;color:var(--gold)}.danger{border-color:#a94b4b;color:#ffaaaa;background:transparent}.hidden{display:none!important}.status{margin-top:12px;font-size:13px;white-space:pre-wrap;color:var(--gold)}.items{display:grid;gap:10px}.item{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:14px;background:#0b0b0d;border:1px solid #ffffff12;border-radius:12px}.item p{margin:4px 0 0;color:var(--muted);font-size:12px}.actions{display:flex;gap:8px;flex-wrap:wrap}.hint{border-right:3px solid var(--gold);padding:8px 12px;background:#e7bd630b;color:#c9c0b0;font-size:12px;line-height:1.9;margin-bottom:18px}@media(max-width:600px){.row{grid-template-columns:1fr}.panel{padding:17px}.top{align-items:flex-start}.item{align-items:flex-start;flex-direction:column}}
+</style></head>
+<body><main class="wrap">
+<div class="top"><div class="brand">✦ <span>Korosh.Edit</span> | پنل مدیریت</div><a href="./index.html">← مشاهده سایت</a></div>
+<section class="panel" id="loginPanel"><h2>ورود مدیر</h2><p class="muted">این صفحه فقط برای مدیر سایت است. برای ورود باید کاربر مدیر را از بخش Authentication در Supabase ساخته باشی.</p>
+<form id="loginForm"><div class="field"><label for="email">ایمیل مدیر</label><input id="email" type="email" autocomplete="username" required placeholder="ایمیل مدیر"></div><div class="field"><label for="password">رمز عبور</label><input id="password" type="password" autocomplete="current-password" required placeholder="رمز عبور"></div><button class="btn primary" type="submit">ورود به مدیریت</button></form><div class="status" id="loginStatus"></div></section>
+<section class="panel hidden" id="adminPanel"><div class="top"><h2 id="formHeading">افزودن نمونه‌کار جدید</h2><button class="btn ghost" id="logoutBtn">خروج</button></div>
+<div class="hint">ویدیو می‌تواند فایل MP4 باشد یا لینک مستقیم/یوتیوب. برای فایل‌های بزرگ، بهتر است ویدیو را در سرویس ویدیویی آپلود کنی و لینک آن را قرار بدهی؛ محدودیت فضای ذخیره‌سازی رایگان را در نظر بگیر.</div>
+<form id="workForm"><input type="hidden" id="editId">
+<div class="row"><div class="field"><label for="title">عنوان نمونه‌کار *</label><input id="title" required maxlength="120" placeholder="مثلاً ادیت ولاگ یوتیوب"></div><div class="field"><label for="category">دسته‌بندی *</label><select id="category" required><option value="youtube">تدوین یوتیوب</option><option value="instagram">تدوین اینستاگرام</option><option value="reels">ریلز و کلیپ کوتاه</option><option value="motion">موشن‌گرافیک و جلوه‌های ویژه</option><option value="other">سایر پروژه‌ها</option></select></div></div>
+<div class="field"><label for="description">توضیحات کوتاه</label><textarea id="description" maxlength="500" placeholder="نوع ادیت، سبک یا توضیح پروژه"></textarea></div>
+<div class="field"><label for="videoFile">آپلود فایل ویدیویی (اختیاری)</label><input id="videoFile" type="file" accept="video/mp4,video/webm,video/quicktime"></div>
+<div class="field"><label for="videoUrl">یا لینک ویدیو / لینک یوتیوب</label><input id="videoUrl" type="url" placeholder="https://..."></div>
+<div class="field"><label for="coverFile">تصویر کاور (اختیاری)</label><input id="coverFile" type="file" accept="image/*"></div>
+<div class="field"><label for="externalUrl">لینک اصلی پروژه (اختیاری)</label><input id="externalUrl" type="url" placeholder="https://youtube.com/... یا لینک اینستاگرام"></div>
+<div class="field"><label><input id="published" type="checkbox" checked style="width:auto;vertical-align:middle"> انتشار در سایت عمومی</label></div>
+<div class="actions"><button class="btn primary" type="submit" id="saveBtn">ذخیره نمونه‌کار</button><button class="btn ghost hidden" type="button" id="cancelEdit">لغو ویرایش</button></div><div class="status" id="formStatus"></div></form></section>
+<section class="panel hidden" id="listPanel"><h2>نمونه‌کارهای ثبت‌شده</h2><div class="items" id="items"><p class="muted">در حال بارگذاری...</p></div><div class="status" id="listStatus"></div></section>
+<section class="panel"><h2>قبل از استفاده</h2><p class="muted">۱. پروژه Supabase بساز و فایل setup.sql را در SQL Editor اجرا کن.<br>۲. در Authentication یک کاربر مدیر بساز و ثبت‌نام عمومی را خاموش کن.<br>۳. مقادیر SUPABASE_URL و SUPABASE_ANON_KEY را در همین فایل و index.html قرار بده.<br>۴. فایل‌های index.html و admin.html را در ریشه مخزن GitHub قرار بده.<br>۵. برای دسته‌بندی‌های جدید، نسخه به‌روزشده setup.sql را هم در SQL Editor اجرا کن.</p></section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL="YOUR_SUPABASE_PROJECT_URL";
+const SUPABASE_ANON_KEY="YOUR_SUPABASE_PUBLISHABLE_OR_ANON_KEY";
+const BUCKET="portfolio-media";
+let client=null, currentUser=null, editing=null;
+if(window.supabase&&SUPABASE_URL.startsWith("https://")&&SUPABASE_ANON_KEY.startsWith("eyJ"))client=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+const $=id=>document.getElementById(id);
+const msg=(id,text)=>$(id).textContent=text;
+const show=(id,yes)=>$(id).classList.toggle('hidden',!yes);
+function categoryLabel(category){return ({youtube:'تدوین یوتیوب',instagram:'تدوین اینستاگرام',reels:'ریلز و کلیپ کوتاه',motion:'موشن‌گرافیک و جلوه‌های ویژه',other:'سایر پروژه‌ها'})[category]||'نمونه‌کار';}
+function safe(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function needConfig(){if(!client){msg('loginStatus','ابتدا SUPABASE_URL و SUPABASE_ANON_KEY را در فایل admin.html وارد کن.');return true;}return false;}
+async function refreshSession(){if(!client)return;const {data}=await client.auth.getSession();if(data.session){currentUser=data.session.user;show('loginPanel',false);show('adminPanel',true);show('listPanel',true);await loadItems();}}
+$('loginForm').addEventListener('submit',async e=>{e.preventDefault();if(needConfig())return;msg('loginStatus','در حال ورود...');const {data,error}=await client.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});if(error){msg('loginStatus','ورود انجام نشد: '+error.message);return;}currentUser=data.user;show('loginPanel',false);show('adminPanel',true);show('listPanel',true);msg('loginStatus','');await loadItems();});
+$('logoutBtn').addEventListener('click',async()=>{if(client)await client.auth.signOut();currentUser=null;show('loginPanel',true);show('adminPanel',false);show('listPanel',false);});
+async function uploadFile(file,folder){if(!file)return null;const ext=(file.name.split('.').pop()||'bin').replace(/[^a-zA-Z0-9]/g,'');const path=folder+'/'+crypto.randomUUID()+'.'+ext;const {error}=await client.storage.from(BUCKET).upload(path,file,{upsert:false,contentType:file.type||undefined});if(error)throw error;const {data}=client.storage.from(BUCKET).getPublicUrl(path);return data.publicUrl;}
+$('workForm').addEventListener('submit',async e=>{e.preventDefault();if(!client||!currentUser)return;const save=$('saveBtn');save.disabled=true;msg('formStatus','در حال ذخیره...');try{
+let videoUrl=$('videoUrl').value.trim(),coverUrl=editing?.cover_url||null;
+const vf=$('videoFile').files[0],cf=$('coverFile').files[0];
+if(vf)videoUrl=await uploadFile(vf,'videos');
+if(cf)coverUrl=await uploadFile(cf,'covers');
+if(!videoUrl){msg('formStatus','لطفاً فایل ویدیو آپلود کن یا لینک ویدیو وارد کن.');save.disabled=false;return;}
+const record={title:$('title').value.trim(),category:$('category').value,description:$('description').value.trim(),video_url:videoUrl,cover_url:coverUrl,external_url:$('externalUrl').value.trim()||null,published:$('published').checked,updated_at:new Date().toISOString()};
+let result;if(editing){result=await client.from('portfolio').update(record).eq('id',editing.id).select().single();}else{record.created_by=currentUser.id;result=await client.from('portfolio').insert(record).select().single();}
+if(result.error)throw result.error;msg('formStatus','نمونه‌کار با موفقیت ذخیره شد.');resetForm();await loadItems();
+}catch(err){console.error(err);msg('formStatus','خطا: '+(err.message||'مشکل در ذخیره‌سازی. تنظیمات Storage و جدول را بررسی کن.'));}finally{save.disabled=false;}});
+function resetForm(){editing=null;$('workForm').reset();$('editId').value='';$('published').checked=true;$('formHeading').textContent='افزودن نمونه‌کار جدید';$('saveBtn').textContent='ذخیره نمونه‌کار';show('cancelEdit',false);}
+$('cancelEdit').addEventListener('click',resetForm);
+async function loadItems(){if(!client)return;const {data,error}=await client.from('portfolio').select('*').order('created_at',{ascending:false});if(error){msg('listStatus','خطا در دریافت لیست: '+error.message);return;}if(!data.length){$('items').innerHTML='<p class="muted">هنوز نمونه‌کاری ثبت نشده است.</p>';return;}
+$('items').innerHTML=data.map(w=>`<div class="item"><div><strong>${safe(w.title)}</strong><p>${categoryLabel(w.category)} • ${w.published?'منتشر شده':'پیش‌نویس'}</p></div><div class="actions"><button class="btn ghost" data-edit="${safe(w.id)}">ویرایش</button><button class="btn danger" data-delete="${safe(w.id)}">حذف</button></div></div>`).join('');
+$('items').querySelectorAll('[data-edit]').forEach(b=>b.addEventListener('click',()=>editItem(data.find(w=>String(w.id)===b.dataset.edit))));
+$('items').querySelectorAll('[data-delete]').forEach(b=>b.addEventListener('click',()=>deleteItem(b.dataset.delete)));
+}
+function editItem(w){if(!w)return;editing=w;$('editId').value=w.id;$('title').value=w.title||'';$('category').value=w.category||'youtube';$('description').value=w.description||'';$('videoUrl').value=w.video_url||'';$('externalUrl').value=w.external_url||'';$('published').checked=!!w.published;$('videoFile').value='';$('coverFile').value='';$('formHeading').textContent='ویرایش نمونه‌کار';$('saveBtn').textContent='ذخیره تغییرات';show('cancelEdit',true);window.scrollTo({top:0,behavior:'smooth'});}
+async function deleteItem(id){if(!confirm('این نمونه‌کار حذف شود؟'))return;const {error}=await client.from('portfolio').delete().eq('id',id);if(error){msg('listStatus','حذف انجام نشد: '+error.message);return;}msg('listStatus','نمونه‌کار حذف شد.');await loadItems();}
+refreshSession();
+</script></body></html>
