@@ -133,7 +133,6 @@ async function loadWorks(){
  if(error){console.error(error);grid.innerHTML='<div class="empty"><strong>بارگذاری نمونه‌کارها انجام نشد</strong>تنظیمات Supabase و جدول portfolio را بررسی کن.</div>';return;}
  allWorks=data||[];renderWorks();
 }
-document.getElementById('year').textContent=new Date().getFullYear();
 loadWorks();
 </script>
 </body></html>
