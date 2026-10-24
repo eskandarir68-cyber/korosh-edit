@@ -59,11 +59,11 @@ footer{border-top:1px solid #ffffff12;padding:25px 0;color:var(--muted);font-siz
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 /* تنظیمات Supabase را بعد از ساخت پروژه در این دو مقدار قرار بده */
-const SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
-const SUPABASE_ANON_KEY = "YOUR_SUPABASE_PUBLISHABLE_OR_ANON_KEY";
+const SUPABASE_URL = "https://psdbvijwvuhixnbwqjmv.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_9q39MN4kNIBaUH9s40SCIw_ERUBFVqM";
 const USE_DEMO_DATA = false;
 let supabaseClient = null;
-if (window.supabase && SUPABASE_URL.startsWith("https://") && SUPABASE_ANON_KEY.startsWith("eyJ")) {
+if (window.supabase && SUPABASE_URL.startsWith("https://") && (SUPABASE_ANON_KEY.startsWith("eyJ") || SUPABASE_ANON_KEY.startsWith("sb_publishable_"))) {
   supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 }
 const demoWorks = [];
