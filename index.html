@@ -96,8 +96,18 @@ const SUPABASE_URL = "https://psdbvijwvuhixnbwqjmv.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_9q39MN4kNIBaUH9s40SCIw_ERUBFVqM";
 const USE_DEMO_DATA = false;
 let supabaseClient = null;
-if (window.supabase && SUPABASE_URL.startsWith("https://") && (SUPABASE_ANON_KEY.startsWith("eyJ") || SUPABASE_ANON_KEY.startsWith("sb_publishable_"))) {
-  supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+if (
+  window.supabase &&
+  SUPABASE_URL.startsWith("https://") &&
+  (
+    SUPABASE_ANON_KEY.startsWith("eyJ") ||
+    SUPABASE_ANON_KEY.startsWith("sb_publishable_")
+  )
+) {
+  supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_ANON_KEY
+  );
 }
 const demoWorks = [];
 const grid = document.getElementById('worksGrid');
